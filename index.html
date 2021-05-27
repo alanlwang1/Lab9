@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lab 9</title>
+	<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+	<script>
+		window.TrackJS && TrackJS.install({ 
+			token: "9d1612ac803a4f8083de157e261b2f52"
+			// for more configuration options, see https://docs.trackjs.com
+		});
+	</script>
+	<title>Lab 9</title>
 
   <style>
     button {
@@ -54,19 +61,6 @@
     <button>Console Trace</button>
     <button>Trigger a Global Error</button>
   </section>
-
-  <script>
-    let calculateBtn = document.querySelector('#calculate');
-    calculateBtn.addEventListener('click', () => {
-      let output = document.querySelector('output');
-      let firstNum = document.querySelector('#first-num').value;
-      let secondNum = document.querySelector('#second-num').value;
-      let operator = document.querySelector('#operator').value;
-      output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
-    });
-
-    let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
-    // TODO - Make buttons functional
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
